@@ -19,7 +19,7 @@ function EditUser() {
     try{
 
 
-      const response = await axios.get(`http://localhost:5000/api/get-singleuser/${id}`,{
+      const response = await axios.get(`https://react-backend-1-djm1.onrender.com/api/get-singleuser/${id}`,{
         headers:{
           "Content-Type":"Application/JSON",
           "Authorization":"Bearer "+token
@@ -91,7 +91,7 @@ function EditUser() {
         data.append('image',image);
       }
 
-      const response = await axios.put(`http://localhost:5000/api/update-user/${id}`,data,{
+      const response = await axios.put(`https://react-backend-1-djm1.onrender.com/api/update-user/${id}`,data,{
         headers:{
           "Content-Type":"multipart/form-data",
           "Authorization":"Bearer "+token
