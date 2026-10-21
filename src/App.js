@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import {lazy, Suspense} from 'react';
 import authRoute from './authRoute';
 import './App.css';
+import ChatBot from './components/ChatBot';
 
 const Login = lazy(() => import('./components/Login'));
 const Dashboard = lazy(() => import('./components/Dashboard'));
@@ -18,6 +19,7 @@ function App() {
         <Route path="/addUser" element={<authRoute><AddUser /></authRoute>} />
         <Route path="/edit-user/:id" element={<authRoute><EditUser /></authRoute>} />
       </Routes>
+      <ChatBot />
     </Suspense>
   );
 }
